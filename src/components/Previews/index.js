@@ -4,6 +4,9 @@ import { LinearGradient } from 'expo-linear-gradient';
 import styles from './styles'; 
 
 const Preview = () => {
+    // criar um arquivo para mudar as imagens das previews
+
+
     return(
         <FlatList
             horizontal

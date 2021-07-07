@@ -9,7 +9,10 @@ import Preview from '../../components/Previews';
 import Section from '../../components/Section';
 import { Entypo } from '@expo/vector-icons';
 
-const Home = () => { 
+const Home = () => {
+    // criar um arquivo para passar nome das sections
+    
+
     return (
         <ScrollView style = {styles.container}>
         <Header />

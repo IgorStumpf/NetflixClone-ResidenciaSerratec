@@ -4,6 +4,8 @@ import { Title } from 'react-native-paper';
 import styles from './styles';
  
 const Section = ({hasTopBorder}) => {
+    // criar arquivo para passar as imagens das sections
+
     return (
         <View style={styles.container}>
                 {hasTopBorder && <View style={styles.borderTop} />}

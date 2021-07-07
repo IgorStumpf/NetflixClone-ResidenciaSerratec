@@ -14,6 +14,12 @@ const Movie = () => {
     const [tipo] = useState('serie')
     const [visible, setVisible] = useState(false)
     const [season, setSeason] = useState({value: 1, label: 'Temporada 1'})
+    const teste = [{ title: '1. Chemistry Class',  time: '43m', ep: 'https://i.pinimg.com/564x/c6/30/62/c63062f105179dd3bcc9bb587f373ae3.jpg' },
+     {title: "2. Jesse pokemon's", time: '41m',  ep: 'https://pokemongolive.com/img/posts/teamgorocket-jessie-james.jpg'},
+     {title: '3. TravisScott.mp3', time: '20min', ep: 'https://talkglitz.media/wp-content/uploads/2018/08/Download-mp3-Travis-Scott-ft-Playboi-Carti-Houdini-mp3-download.jpg'},
+     {title: '4. Me and You', time: '5 minutin sem perder amizade', ep: 'https://i.ytimg.com/vi/UdtKuSpF3-I/hqdefault.jpg'},
+     {title: '5. Maria do Bairro', time: '1h10min de Nazaré Tedesco', ep: 'https://img.estadao.com.br/resources/jpg/6/8/1558380297686.jpg'}
+    ]
 
 
     return (
@@ -52,7 +58,7 @@ const Movie = () => {
         <ScrollView style={styles.container}>
             <ImageBackground source={{uri: 'https://i.imgur.com/EJyDFeY.jpg'}} style={styles.hero} />
             <View style={styles.control}>
-                <Title>Nome do Filme</Title>
+                <Title>Breaking Bad</Title>
                 <TouchableOpacity style={styles.testButton}>
                 <Entypo name="controller-play" mode='contained' size={28} color="#000" />
                 <Text style={{fontSize: 16}}>Assistir</Text>
@@ -62,10 +68,10 @@ const Movie = () => {
                 <Text style={{fontSize: 16, color: '#fff'}}> Baixar</Text>
                 </TouchableOpacity>
                 <Paragraph style={{color: '#fff'}}>
-                    Pregadores Profanos. Autoridades corruptas. Amantes. Assassinos. Numa cidade cheia de pecadores, um jovem busca justiça.
+                Uma turminha da pesada que produz dorguinhas porque seu professor de química assim ensinou.
                 </Paragraph>
                 <Caption style={styles.infos}>
-                    Elenco: Silvio Sampaio, Juliana Righi, Omar Sampaio, Mikael Lopes.
+                    Elenco: Vin Diesel idoso, Jesse James Pokemon, Angelica do Luciano Huck.
                     Gêneros: Ação, Aventura, Drama. Cenas e momentos: Violentos.
                 </Caption>
             <View style={styles.options}>
@@ -82,8 +88,11 @@ const Movie = () => {
                         <Icon name='chevron-down' color='#fff' size={20} />
                     </TouchableOpacity>
 
-                    <FlatList data={[1, 2, 3, 4, 5]}
-                        renderItem={({ item, index}) => <Episodes key={index} />}
+                    <FlatList data={teste}
+                        keyExtractor={item => item.title}
+                        renderItem={({ item }) => (<Episodes title={item.title} time={item.time} ep={item.ep} />)
+                        
+                    }
                         />
                 </>
             )}

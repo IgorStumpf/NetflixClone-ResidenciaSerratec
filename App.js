@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-/* import Home from './src/pages/Home' */
+import Home from './src/pages/Home';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
-/* import Movie from './src/pages/Movies' */
-import Routes from './routes'
-import Login from './src/pages/Login' 
+import Movie from './src/pages/Movies';
+import Routes from './routes';
+import Login from './src/pages/Login';
 
 const App = () => {
 
@@ -23,9 +23,11 @@ const App = () => {
     <PaperProvider theme={theme}>
       <StatusBar backgroundColor='#000' />
       <Login />
-{/*   <Routes />
+    {/*  
+      <Home /> 
       <Movie />
-      <Home /> */}
+      <Routes />
+      */}
     </PaperProvider>
   )
 }
